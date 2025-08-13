@@ -1,7 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 const config = {
   darkMode: ["class"],
-  content: ["./kindeSrc/environment/pages/**/*.svelte"],
+  content: ["./kindeSrc/environment/pages/**/*.{js,ts,jsx,tsx,mdx}"],
   theme: {
     container: {
       center: true,
