@@ -1,0 +1,14 @@
+{
+  "name": "kinde-custom-ui-svelte",
+  "version": "1.0.0",
+  "description": "Custom UI pages for Kinde using Svelte",
+  "type": "module",
+  "scripts": {
+    "dev": "echo 'Run by Kinde build system'"
+  },
+  "devDependencies": {
+    "svelte": "^4.2.18",
+    "tailwindcss": "^3.4.4",
+    "typescript": "^5.4.5"
+  }
+}
