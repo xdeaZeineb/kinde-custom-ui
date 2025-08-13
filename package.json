@@ -1,14 +1,16 @@
 {
-  "name": "kinde-custom-ui-svelte",
+  "name": "custom-ui-splitscreen",
   "version": "1.0.0",
-  "description": "Custom UI pages for Kinde using Svelte",
-  "type": "module",
+  "main": "index.js",
   "scripts": {
-    "dev": "echo 'Run by Kinde build system'"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "devDependencies": {
-    "svelte": "^4.2.18",
-    "tailwindcss": "^3.4.4",
-    "typescript": "^5.4.5"
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@kinde/infrastructure": "^0.2.2",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
   }
 }
