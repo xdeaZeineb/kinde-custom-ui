@@ -6,6 +6,7 @@ export const Widget = (props) => {
   return (
     <main className="widget">
       <h2 className="widget-heading">{props.heading}</h2>
+      <p className="widget-description">{props.description}</p>
       {getKindeWidget()}
     </main>
   );

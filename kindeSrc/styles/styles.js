@@ -1,33 +1,5 @@
-// CSS Variables for Kinde's internal components
-const kindeVariables = {
-  baseFontFamily: "Arial, Helvetica, sans-serif",
-  buttonPrimaryBackgroundColor: "#1E90FF", // dodgerblue hex code
-  buttonPrimaryColor: "#FFFFFF",
-  buttonBorderRadius: "6px",
-  buttonSecondaryBackgroundColor: "#F8F9FA",
-  buttonSecondaryColor: "#343A40",
-  buttonSecondaryBorderWidth: "1px",
-  buttonSecondaryBorderColor: "#DEE2E6",
-  buttonSecondaryBorderStyle: "solid",
-  buttonSecondaryBorderRadius: "6px",
-};
-
 export const getStyles = () => `
-  /* Inject Kinde's variables */
-  :root {
-    --kinde-base-font-family: ${kindeVariables.baseFontFamily};
-    --kinde-button-primary-background-color: ${kindeVariables.buttonPrimaryBackgroundColor};
-    --kinde-button-primary-color: ${kindeVariables.buttonPrimaryColor};
-    --kinde-button-border-radius: ${kindeVariables.buttonBorderRadius};
-    --kinde-button-secondary-background-color: ${kindeVariables.buttonSecondaryBackgroundColor};
-    --kinde-button-secondary-color: ${kindeVariables.buttonSecondaryColor};
-    --kinde-button-secondary-border-width: ${kindeVariables.buttonSecondaryBorderWidth};
-    --kinde-button-secondary-border-color: ${kindeVariables.buttonSecondaryBorderColor};
-    --kinde-button-secondary-border-style: ${kindeVariables.buttonSecondaryBorderStyle};
-    --kinde-button-secondary-border-radius: ${kindeVariables.buttonSecondaryBorderRadius};
-  }
-
-  /* Your Custom Layout Styles (Ultra-Compatible) */
+  /* Your Custom Layout Styles */
   body {
     background-color: #F0F2F5;
     font-family: Arial, Helvetica, sans-serif;
@@ -42,7 +14,7 @@ export const getStyles = () => `
     border-radius: 8px;
     width: 90%;
     max-width: 400px;
-    padding: 2rem;
+    padding: 2.5rem;
     box-sizing: border-box;
     margin-top: 50px;
     margin-left: auto;
@@ -65,27 +37,73 @@ export const getStyles = () => `
     margin-bottom: 32px;
   }
 
-  /* ================================================= */
-  /* === STYLES FOR KINDE'S INTERNAL COMPONENTS (FIX) === */
-  /* ================================================= */
+  /* ================================================================= */
+  /* === NEW: DIRECT STYLES FOR ALL KINDE WIDGET COMPONENTS (FIX) === */
+  /* ================================================================= */
 
-  /* This targets the container for the social login buttons */
-  [data-kinde-layout-auth-buttons] { 
-    display: flex;
-    justify-content: center;
-    gap: 0.75rem; /* This creates space between the buttons */
+  /* --- Email Input Field Styling --- */
+  [data-kinde-form] input[type="email"] {
+    display: block !important;
+    width: 100% !important;
+    height: 44px !important;
+    padding: 0 12px !important;
+    font-size: 16px !important;
+    margin-bottom: 12px !important;
+    border: 1px solid #CCCCCC !important;
+    border-radius: 6px !important;
+    box-sizing: border-box !important;
   }
 
-  /* This is the key fix: It sizes the social login buttons correctly */
+  /* --- Primary "Continue" Button Styling --- */
+  [data-kinde-form] button[type="submit"] {
+    display: inline-block !important;
+    width: 100% !important;
+    height: 44px !important;
+    padding: 0 18px !important;
+    font-size: 16px !important;
+    font-weight: bold !important;
+    color: #FFFFFF !important;
+    background-color: #1E90FF !important; /* dodgerblue */
+    border: none !important;
+    border-radius: 6px !important;
+    cursor: pointer !important;
+    text-align: center !important;
+    line-height: 44px !important;
+  }
+  
+  /* --- Social Login Buttons Styling --- */
+  [data-kinde-layout-auth-buttons] {
+    text-align: center !important;
+    margin-bottom: 24px !important;
+    padding-top: 24px !important;
+  }
   [data-kinde-layout-auth-buttons-item] {
-    width: 48px;  /* 3rem */
-    height: 48px; /* 3rem */
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 48px !important;
+    height: 48px !important;
+    margin: 0 5px !important;
+    border: 1px solid #E0E0E0 !important;
+    border-radius: 50% !important;
+  }
+  [data-kinde-layout-auth-buttons-item] svg {
+    width: 24px !important;
+    height: 24px !important;
+  }
+  [data-kinde-layout-auth-buttons-item] span {
+    display: none !important;
   }
 
-  /* This styles the "OR" separator text */
+  /* --- "Powered by Kinde" Branding --- */
+  [data-kinde-branding] {
+    display: none !important;
+  }
+  
+  /* --- "OR" Separator --- */
   [data-kinde-choice-separator] {
-    text-transform: uppercase;
-    font-size: 12px;
-    color: #6C757D;
+    text-transform: uppercase !important;
+    font-size: 12px !important;
+    color: #6C757D !important;
   }
 `;
