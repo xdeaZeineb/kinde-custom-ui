@@ -91,9 +91,7 @@ export const getStyles = () => `
     width: 24px !important;
     height: 24px !important;
   }
-  [data-kinde-layout-auth-buttons-item] span {
-    display: none !important;
-  }
+ 
 
   /* --- "Powered by Kinde" Branding --- */
   [data-kinde-branding] {
