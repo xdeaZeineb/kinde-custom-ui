@@ -5,7 +5,6 @@ export const getStyles = () => `
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
-    text-align: center;
   }
 
   .widget {
@@ -16,9 +15,7 @@ export const getStyles = () => `
     max-width: 400px;
     padding: 2.5rem;
     box-sizing: border-box;
-    margin-top: 50px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 50px auto;
     text-align: left;
   }
 
@@ -37,15 +34,17 @@ export const getStyles = () => `
     margin-bottom: 32px;
   }
 
-  .kinde-layout-widget-branding{
-  display: none}
+  /* =================================================================== */
+  /* === NEW, SPECIFIC STYLES BASED ON YOUR DEV TOOLS HTML (FIX) === */
+  /* =================================================================== */
 
-  /* ================================================================= */
-  /* === NEW: DIRECT STYLES FOR ALL KINDE WIDGET COMPONENTS (FIX) === */
-  /* ================================================================= */
-
-  /* --- Email Input Field Styling --- */
-  [data-kinde-form] input[type="email"] {
+  /* --- General Form Styling --- */
+  .kinde-form {
+    margin-bottom: 1rem;
+  }
+  
+  /* --- Email Input Field --- */
+  .kinde-control-select-text {
     display: block !important;
     width: 100% !important;
     height: 44px !important;
@@ -57,12 +56,10 @@ export const getStyles = () => `
     box-sizing: border-box !important;
   }
 
-  /* --- Primary "Continue" Button Styling --- */
-  [data-kinde-form] button[type="submit"] {
-    display: inline-block !important;
+  /* --- Primary "Continue" Button --- */
+  .kinde-button.kinde-button-variant-primary {
     width: 100% !important;
-    height: 44px !important;
-    padding: 0 18px !important;
+    padding: 12px !important;
     font-size: 16px !important;
     font-weight: bold !important;
     color: #FFFFFF !important;
@@ -70,39 +67,63 @@ export const getStyles = () => `
     border: none !important;
     border-radius: 6px !important;
     cursor: pointer !important;
-    text-align: center !important;
-    line-height: 44px !important;
   }
   
-  /* --- Social Login Buttons Styling --- */
-  [data-kinde-layout-auth-buttons] {
+  /* --- Social Login Buttons --- */
+  .kinde-layout-auth-buttons {
     text-align: center !important;
+    list-style-type: none !important; /* Removes bullet points from the <ul> */
+    padding: 0 !important;
     margin-bottom: 24px !important;
-    padding-top: 24px !important;
   }
-  [data-kinde-layout-auth-buttons-item] {
-    display: inline-flex !important;
+  .kinde-layout-auth-buttons li {
+    display: inline-block !important; /* Lines them up horizontally */
+    margin: 0 5px !important; /* Adds space between buttons */
+  }
+  .kinde-button.kinde-button-variant-secondary {
+    display: flex !important;
     align-items: center !important;
     justify-content: center !important;
     width: 48px !important;
     height: 48px !important;
-    margin: 0 5px !important;
     border: 1px solid #E0E0E0 !important;
-    border-radius: 50% !important;
+    border-radius: 50% !important; /* Makes them circular */
+    background-color: #FFFFFF !important;
   }
-  [data-kinde-layout-auth-buttons-item] svg {
+  .kinde-button.kinde-button-variant-secondary svg {
     width: 24px !important;
     height: 24px !important;
   }
- 
+
+  /* This is a standard CSS trick to hide text meant for screen readers. */
+  .kinde-util-hide-visually {
+    border: 0 !important;
+    clip: rect(0 0 0 0) !important;
+    height: 1px !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    padding: 0 !important;
+    position: absolute !important;
+    width: 1px !important;
+  }
 
   /* --- "Powered by Kinde" Branding --- */
-  [data-kinde-branding] {
-    display: none !important;
+  .kinde-layout-widget-branding {
+    text-align: center !important;
+    margin-top: 24px !important;
+  }
+  .kinde-layout-widget-branding figcaption {
+    font-size: 12px !important;
+    color: #909090 !important;
+    margin-bottom: 4px !important;
+  }
+  .kinde-layout-widget-branding a svg {
+    width: 80px !important;
+    height: auto !important;
   }
   
   /* --- "OR" Separator --- */
-  [data-kinde-choice-separator] {
+  .kinde-choice-separator {
     text-transform: uppercase !important;
     font-size: 12px !important;
     color: #6C757D !important;
