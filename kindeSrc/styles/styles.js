@@ -33,10 +33,9 @@ export const getStyles = () => `
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
-    text-align: center; /* Center text for old browsers */
+    text-align: center;
   }
 
-  /* Using margin:auto for centering instead of Flexbox */
   .widget {
     background-color: #FFFFFF;
     border: 1px solid #E0E0E0;
@@ -45,14 +44,14 @@ export const getStyles = () => `
     max-width: 400px;
     padding: 2rem;
     box-sizing: border-box;
-    margin-top: 50px; /* Give some space from the top */
+    margin-top: 50px;
     margin-left: auto;
     margin-right: auto;
-    text-align: left; /* Reset text alignment for card content */
+    text-align: left;
   }
 
   .widget-heading {
-    font-size: 28px; /* Using pixels for compatibility */
+    font-size: 28px;
     font-weight: 600;
     margin-top: 0;
     margin-bottom: 8px;
@@ -64,5 +63,29 @@ export const getStyles = () => `
     color: #6C757D;
     margin-top: 0;
     margin-bottom: 32px;
+  }
+
+  /* ================================================= */
+  /* === STYLES FOR KINDE'S INTERNAL COMPONENTS (FIX) === */
+  /* ================================================= */
+
+  /* This targets the container for the social login buttons */
+  [data-kinde-layout-auth-buttons] { 
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem; /* This creates space between the buttons */
+  }
+
+  /* This is the key fix: It sizes the social login buttons correctly */
+  [data-kinde-layout-auth-buttons-item] {
+    width: 48px;  /* 3rem */
+    height: 48px; /* 3rem */
+  }
+
+  /* This styles the "OR" separator text */
+  [data-kinde-choice-separator] {
+    text-transform: uppercase;
+    font-size: 12px;
+    color: #6C757D;
   }
 `;
