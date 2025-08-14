@@ -1,31 +1,13 @@
 "use server";
 import { getKindeWidget } from "@kinde/infrastructure";
 import React from "react";
-const styles = {
-  loginForm: {
-    minWidth: "400px",
-    margin: "0 auto",
-    display: "flex",
-    flexDirection: "column",
-    justifyContent: "center",
-  },
-  heading: {
-    fontWeight: "600",
-    fontSize: "2rem",
-  },
-  description: {
-    marginBottom: "1.5rem",
-  },
-};
 
 export const Widget = (props) => {
   return (
-    <main style={styles.loginForm}>
-      <div style={{ padding: "2rem" }}>
-        <h2 style={styles.heading}>{props.heading}</h2>
-        <p style={styles.description}>{props.description}</p>
-        {getKindeWidget()}
-      </div>
+    <main className="widget">
+      <h2 className="widget-heading">{props.heading}</h2>
+      <p className="widget-description">{props.description}</p>
+      {getKindeWidget()}
     </main>
   );
 };
