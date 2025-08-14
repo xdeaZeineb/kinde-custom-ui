@@ -3,6 +3,7 @@
 import { Widget } from "../../../../components/widget";
 import { DefaultLayout } from "../../../../layouts/default";
 import { Root } from "../../../../root";
+import React from "react";
 import { renderToString } from "react-dom/server.browser";
 
 const DefaultPage = ({ context, request }) => {

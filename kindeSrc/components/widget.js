@@ -1,6 +1,6 @@
 "use server";
 import { getKindeWidget } from "@kinde/infrastructure";
-
+import React from "react";
 const styles = {
   loginForm: {
     minWidth: "400px",

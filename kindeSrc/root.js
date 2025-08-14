@@ -7,6 +7,7 @@ import {
   getSVGFaviconUrl,
 } from "@kinde/infrastructure";
 import { getStyles } from "./styles/styles";
+import React from "react";
 
 export const Root = ({ children, context, request }) => {
   return (
