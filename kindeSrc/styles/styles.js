@@ -1,18 +1,13 @@
 // CSS Variables for Kinde's internal components
 const kindeVariables = {
-  // Fonts
-  baseFontFamily: "Arial, sans-serif",
-
-  // Primary Button (e.g., "Continue")
-  buttonPrimaryBackgroundColor: "#2563eb", // A standard blue
-  buttonPrimaryColor: "#ffffff",
-  buttonBorderRadius: "6px", // A more traditional border radius
-
-  // Secondary Button (e.g., social logins)
-  buttonSecondaryBackgroundColor: "#f8f9fa",
-  buttonSecondaryColor: "#343a40",
+  baseFontFamily: "Arial, Helvetica, sans-serif",
+  buttonPrimaryBackgroundColor: "#1E90FF", // dodgerblue hex code
+  buttonPrimaryColor: "#FFFFFF",
+  buttonBorderRadius: "6px",
+  buttonSecondaryBackgroundColor: "#F8F9FA",
+  buttonSecondaryColor: "#343A40",
   buttonSecondaryBorderWidth: "1px",
-  buttonSecondaryBorderColor: "#dee2e6",
+  buttonSecondaryBorderColor: "#DEE2E6",
   buttonSecondaryBorderStyle: "solid",
   buttonSecondaryBorderRadius: "6px",
 };
@@ -32,57 +27,42 @@ export const getStyles = () => `
     --kinde-button-secondary-border-radius: ${kindeVariables.buttonSecondaryBorderRadius};
   }
 
-  /* Your Custom Layout Styles */
+  /* Your Custom Layout Styles (Ultra-Compatible) */
   body {
-    background-color: #f0f2f5;
+    background-color: #F0F2F5;
+    font-family: Arial, Helvetica, sans-serif;
     margin: 0;
+    padding: 0;
+    text-align: center; /* Center text for old browsers */
   }
 
-  .container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    min-height: 100vh;
-    padding: 1rem;
-    box-sizing: border-box;
-  }
-
+  /* Using margin:auto for centering instead of Flexbox */
   .widget {
-    background-color: #ffffff;
-    border: 1px solid #e0e0e0;
+    background-color: #FFFFFF;
+    border: 1px solid #E0E0E0;
     border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    width: 100%;
+    width: 90%;
     max-width: 400px;
     padding: 2rem;
     box-sizing: border-box;
+    margin-top: 50px; /* Give some space from the top */
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left; /* Reset text alignment for card content */
   }
 
   .widget-heading {
-    font-size: 1.75rem;
+    font-size: 28px; /* Using pixels for compatibility */
     font-weight: 600;
     margin-top: 0;
-    margin-bottom: 0.5rem;
+    margin-bottom: 8px;
     color: #212529;
   }
 
   .widget-description {
-    font-size: 1rem;
-    color: #6c757d;
+    font-size: 16px;
+    color: #6C757D;
     margin-top: 0;
-    margin-bottom: 2rem;
-  }
-
-  /* Make Kinde's social login buttons a bit bigger */
-  [data-kinde-layout-auth-buttons] { 
-    display: flex;
-    justify-content: center;
-    gap: 0.5rem; /* Note: gap is modern, but has good support */
-  }
-
-  [data-kinde-layout-auth-buttons-item] {
-    width: 3rem;
-    height: 3rem;
+    margin-bottom: 32px;
   }
 `;
