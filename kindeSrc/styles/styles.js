@@ -51,7 +51,7 @@ export const getStyles = () => `
     padding: 0 12px !important;
     font-size: 16px !important;
     margin-bottom: 12px !important;
-    border: 1px solid #CCCCCC !important;
+    border: 1px solid #ffffff !important;
     border-radius: 6px !important;
     box-sizing: border-box !important;
   }
@@ -63,7 +63,7 @@ export const getStyles = () => `
     font-size: 16px !important;
     font-weight: bold !important;
     color: #FFFFFF !important;
-    background-color: #1E90FF !important; /* dodgerblue */
+    background-color: #020618 !important; 
     border: none !important;
     border-radius: 6px !important;
     cursor: pointer !important;
@@ -118,7 +118,7 @@ export const getStyles = () => `
     margin-bottom: 4px !important;
   }
   .kinde-layout-widget-branding a svg {
-    width: 80px !important;
+    width: 50px !important;
     height: auto !important;
   }
   
