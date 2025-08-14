@@ -51,7 +51,7 @@ export const getStyles = () => `
     padding: 0 12px !important;
     font-size: 16px !important;
     margin-bottom: 12px !important;
-    border: 1px solid #ffffff !important;
+    border: 1px solid #CCCCCC !important;
     border-radius: 6px !important;
     box-sizing: border-box !important;
   }
@@ -118,7 +118,7 @@ export const getStyles = () => `
     margin-bottom: 4px !important;
   }
   .kinde-layout-widget-branding a svg {
-    width: 50px !important;
+    width: 40px !important;
     height: auto !important;
   }
   
