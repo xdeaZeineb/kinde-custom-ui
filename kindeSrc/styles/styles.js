@@ -18,7 +18,13 @@ export const getStyles = () => `
     --kinde-base-font-family: ${kindeVariables.baseFontFamily};
     --kinde-button-primary-background-color: ${kindeVariables.buttonPrimaryBackgroundColor};
     --kinde-button-primary-color: ${kindeVariables.buttonPrimaryColor};
-    /* ... and so on ... */
+    --kinde-button-border-radius: ${kindeVariables.buttonBorderRadius};
+    --kinde-button-secondary-background-color: ${kindeVariables.buttonSecondaryBackgroundColor};
+    --kinde-button-secondary-color: ${kindeVariables.buttonSecondaryColor};
+    --kinde-button-secondary-border-width: ${kindeVariables.buttonSecondaryBorderWidth};
+    --kinde-button-secondary-border-color: ${kindeVariables.buttonSecondaryBorderColor};
+    --kinde-button-secondary-border-style: ${kindeVariables.buttonSecondaryBorderStyle};
+    --kinde-button-secondary-border-radius: ${kindeVariables.buttonSecondaryBorderRadius};
   }
 
   /* Your Custom Layout Styles */
@@ -59,37 +65,50 @@ export const getStyles = () => `
     margin-bottom: 32px;
   }
 
-  /* ================================================= */
-  /* === STYLES FOR KINDE'S INTERNAL COMPONENTS (FIX) === */
-  /* ================================================= */
+  /* ======================================================== */
+  /* === NEW FIXES FOR SOCIAL BUTTONS AND KINDE BRANDING === */
+  /* ======================================================== */
 
   /* This styles the container for the social login buttons */
-  [data-kinde-layout-auth-buttons] { 
-    display: flex;
-    flex-wrap: wrap; /* Allows buttons to wrap on smaller screens */
-    justify-content: center;
-    gap: 0.75rem;
-    margin-bottom: 1.5rem; /* Adds space below the buttons */
+  [data-kinde-layout-auth-buttons] {
+    text-align: center; /* Center the buttons inside the container */
+    margin-bottom: 24px;
   }
 
-  /* This styles the individual social login buttons */
+  /* This styles the individual social login buttons for proper spacing */
   [data-kinde-layout-auth-buttons-item] {
+    display: inline-block; /* Allows margins to work correctly */
     width: 48px;
     height: 48px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden; /* Ensures nothing spills out */
+    margin: 0 5px; /* Adds space between the buttons */
+    vertical-align: middle;
   }
 
-  /* This hides the "Continue with..." text inside the buttons */
-  [data-kinde-layout-auth-buttons-item] > div {
-    display: none;
-  }
-
-  /* This hides the large "Powered by Kinde" logo */
-  [data-kinde-branding] {
+  /* This hides the "Continue" text under the icons */
+  [data-kinde-layout-auth-buttons-item] span {
     display: none !important;
+  }
+
+  /* This styles the "Powered by Kinde" branding section */
+  [data-kinde-branding] {
+    text-align: center;
+    margin-top: 24px;
+  }
+
+  /* This targets the "Powered by Kinde" text itself */
+  [data-kinde-branding] span {
+    display: block;
+    font-size: 12px;
+    color: #909090;
+    margin-bottom: 4px;
+  }
+
+  /* This targets the Kinde logo image/svg and makes it much smaller */
+  [data-kinde-branding] svg,
+  [data-kinde-branding] img {
+    width: 60px !important;
+    height: auto !important;
+    display: inline-block !important; /* Ensures centering works */
   }
 
   /* This styles the "OR" separator text */
