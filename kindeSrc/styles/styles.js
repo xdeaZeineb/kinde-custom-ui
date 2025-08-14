@@ -37,6 +37,9 @@ export const getStyles = () => `
     margin-bottom: 32px;
   }
 
+  .kinde-layout-widget-branding{
+  display: none}
+
   /* ================================================================= */
   /* === NEW: DIRECT STYLES FOR ALL KINDE WIDGET COMPONENTS (FIX) === */
   /* ================================================================= */
