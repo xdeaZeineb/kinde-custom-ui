@@ -1,7 +1,7 @@
 // CSS Variables for Kinde's internal components
 const kindeVariables = {
   baseFontFamily: "Arial, Helvetica, sans-serif",
-  buttonPrimaryBackgroundColor: "#1E90FF",
+  buttonPrimaryBackgroundColor: "#1E90FF", // dodgerblue hex code
   buttonPrimaryColor: "#FFFFFF",
   buttonBorderRadius: "6px",
   buttonSecondaryBackgroundColor: "#F8F9FA",
@@ -27,7 +27,7 @@ export const getStyles = () => `
     --kinde-button-secondary-border-radius: ${kindeVariables.buttonSecondaryBorderRadius};
   }
 
-  /* Your Custom Layout Styles */
+  /* Your Custom Layout Styles (Ultra-Compatible) */
   body {
     background-color: #F0F2F5;
     font-family: Arial, Helvetica, sans-serif;
@@ -65,76 +65,21 @@ export const getStyles = () => `
     margin-bottom: 32px;
   }
 
-  /* ======================================================== */
-  /* === NEW FIXES FOR SOCIAL BUTTONS AND KINDE BRANDING === */
-  /* ======================================================== */
+  /* ================================================= */
+  /* === STYLES FOR KINDE'S INTERNAL COMPONENTS (FIX) === */
+  /* ================================================= */
 
-  /* This styles the container for the social login buttons */
-  [data-kinde-layout-auth-buttons] {
-    text-align: center;
-    margin-bottom: 24px;
-  }
-
-  /* This styles the individual social login buttons */
-  [data-kinde-layout-auth-buttons-item] {
-    display: inline-block;
-    width: 48px;
-    height: 48px;
-    margin: 0 5px;
-    vertical-align: middle;
-    /* This makes the button a circle, which looks nice for icons */
-    border-radius: 50%; 
-    overflow: hidden;
-  }
-
-  /* This ensures the link inside fills the button */
-  [data-kinde-layout-auth-buttons-item] a {
+  /* This targets the container for the social login buttons */
+  [data-kinde-layout-auth-buttons] { 
     display: flex;
-    align-items: center;
     justify-content: center;
-    width: 100%;
-    height: 100%;
+    gap: 0.75rem; /* This creates space between the buttons */
   }
 
-  /* This ensures the icon/image inside the link is sized correctly */
-  [data-kinde-layout-auth-buttons-item] a svg,
-  [data-kinde-layout-auth-buttons-item] a img {
-    width: 24px;
-    height: 24px;
-  }
-
-  /* This visually hides the "Continue with..." text without breaking the layout */
-  [data-kinde-layout-auth-buttons-item] span {
-    border: 0;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px;
-  }
-
-  /* This styles the "Powered by Kinde" branding section */
-  [data-kinde-branding] {
-    text-align: center;
-    margin-top: 24px;
-  }
-
-  /* This targets the "Powered by Kinde" text itself */
-  [data-kinde-branding] span {
-    display: block;
-    font-size: 12px;
-    color: #909090;
-    margin-bottom: 4px;
-  }
-
-  /* This targets the Kinde logo and makes it much smaller */
-  [data-kinde-branding] svg,
-  [data-kinde-branding] img {
-    width: 60px !important;
-    height: auto !important;
-    display: inline-block !important;
+  /* This is the key fix: It sizes the social login buttons correctly */
+  [data-kinde-layout-auth-buttons-item] {
+    width: 48px;  /* 3rem */
+    height: 48px; /* 3rem */
   }
 
   /* This styles the "OR" separator text */
